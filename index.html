@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richmond Orange</title>
+    <title>richmond orange</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,16 +19,31 @@
                 <span></span>
             </button>
             <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="book.html" class="book-demo">Book Demo</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button class="book-demo">Book Demo</button>
             </div>
         </div>
     </nav>
 
     <section class="hero">
-        <h1>We empower businesses with cutting-edge AI solutions tailored to drive innovation, efficiency, and growth.</h1>
+        <h1>We empower businesses with cutting-edge AI solutions tailored to drive innovation, efficiency, and growth. As a leading AI consultancy, we bridge the gap between complex technology and practical business applications, ensuring that AI works for you — not the other way around.</h1>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our AI Advisory Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Digital Transformation Strategy</h3>
+            </div>
+            <div class="service-card">
+                <h3>Implementation Support</h3>
+            </div>
+            <div class="service-card">
+                <h3>Risk Mitigation</h3>
+            </div>
+        </div>
     </section>
 
     <script>
@@ -39,11 +54,18 @@
         }
 
         document.querySelectorAll('.nav-links a').forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     </script>
 </body>
 </html>
-
