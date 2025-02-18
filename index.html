@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>richmond orange</title>
+    <title>About - Richmond Orange</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,31 +19,17 @@
                 <span></span>
             </button>
             <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
                 <button class="book-demo">Book Demo</button>
             </div>
         </div>
     </nav>
 
     <section class="hero">
-        <h1>We empower businesses with cutting-edge AI solutions tailored to drive innovation, efficiency, and growth. As a leading AI consultancy, we bridge the gap between complex technology and practical business applications, ensuring that AI works for you — not the other way around.</h1>
-    </section>
-
-    <section class="services" id="services">
-        <h2>Our AI Advisory Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Digital Transformation Strategy</h3>
-            </div>
-            <div class="service-card">
-                <h3>Implementation Support</h3>
-            </div>
-            <div class="service-card">
-                <h3>Risk Mitigation</h3>
-            </div>
-        </div>
+        <h1>About Richmond Orange</h1>
+        <p>We empower businesses with cutting-edge AI solutions tailored to drive innovation, efficiency, and growth. As a leading AI consultancy, we bridge the gap between complex technology and practical business applications, ensuring that AI works for you — not the other way around.</p>
     </section>
 
     <script>
@@ -52,20 +38,50 @@
             navLinks.classList.toggle('active');
             document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         }
+    </script>
+</body>
+</html>
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Richmond Orange</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                richmond orange
+                <div class="dot"></div>
+            </div>
+            <button class="menu-button" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button class="book-demo">Book Demo</button>
+            </div>
+        </div>
+    </nav>
 
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                document.querySelector('.nav-links').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>Email us at info@richmondorange.com or call us at (123) 456-7890.</p>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        }
     </script>
 </body>
 </html>
